@@ -31,3 +31,67 @@ body {
     text-wrap: balance;
   }
 }
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.scaleUp {
+  animation: scaleUp 0.5s ease-out forwards;
+}
+
+@keyframes flipIn {
+  from {
+    transform: perspective(400px) rotateY(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+.flipIn {
+  animation: flipIn 0.8s ease-in-out forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(15px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bounceIn {
+  animation: bounceIn 0.9s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideInLeft {
+  animation: slideInLeft 0.7s ease-out forwards;
+}
