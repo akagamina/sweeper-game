@@ -120,8 +120,7 @@ const Board = ({ difficulty, incrementScore, handleGameOver }: BoardProps) => {
                 : cell && gameOver
                 ? "wrong-choice.png"
                 : "main-bg.png"
-            }
-            `}
+            }`}
             alt="character"
             width={50}
             height={50}
