@@ -42,8 +42,9 @@ const Game = () => {
       }
       await delay(delayTime);
       resetGame();
+      dispatch({ type: "game/resetScore" });
     },
-    [resetGame]
+    [dispatch, resetGame]
   );
 
   return (
@@ -55,6 +56,7 @@ const Game = () => {
         gameOver={gameOver}
       />
       {!gameOver && <p className="text-lg mt-4">Point: {score}</p>}
+
       <Toaster />
     </div>
   );

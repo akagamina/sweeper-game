@@ -1,6 +1,5 @@
-
-import { Difficulty } from '@/types/BoardTypes';
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Difficulty } from "@/types/BoardTypes";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface GameState {
   difficulty: Difficulty;
@@ -8,12 +7,12 @@ interface GameState {
 }
 
 const initialState: GameState = {
-  difficulty: 'medium',
+  difficulty: "medium",
   score: 0,
 };
 
 export const gameSlice = createSlice({
-  name: 'game',
+  name: "game",
   initialState,
   reducers: {
     setDifficulty: (state, action: PayloadAction<Difficulty>) => {
@@ -21,10 +20,13 @@ export const gameSlice = createSlice({
     },
     incrementScore: (state) => {
       state.score = state.score + 1;
-    }
+    },
+    resetScore: (state) => {
+      state.score = 0;
+    },
   },
 });
 
-export const { setDifficulty, incrementScore } = gameSlice.actions;
+export const { setDifficulty, incrementScore, resetScore } = gameSlice.actions;
 
 export default gameSlice.reducer;

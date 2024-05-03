@@ -25,10 +25,10 @@ const Sidebar = () => {
         </div>
       ) : (
         <div
-          className="absolute flex items-center cursor-pointer right-8 top-3"
+          className="absolute flex items-center cursor-pointer right-0 top-0"
           onClick={() => setShowSidebar(!showSidebar)}
         >
-          <span className="relative z-50 text-3xl text-primary">&#9744;</span>
+          <span className="relative z-50 text-3xl text-primary">&#9776;</span>
         </div>
       )}
 
